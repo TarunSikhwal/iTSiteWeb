@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>@Page.Title - iTSikhwal</title>
+        <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+        <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+        <link href="~/NewFolder1/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+        <script src="~/Scripts/jquery-ui-1.12.1.js"></script>
+        <script src="~/Scripts/modernizr-2.8.3.js"></script>
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title"><a href="~/"><img style="border-radius: 50%; background: linear-gradient(145deg, #ffffff, #e6e6e6); box-shadow: 5px 5px 14px #c2c2c2, -5px -5px 14px #ffffff; " height="100" width="100"src="~/NewFolder1/IMG_20210114_113456.png" /></a></p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @if (WebSecurity.IsAuthenticated) {
+                            <text>
+                                Hello, <a class="email" href="~/Account/Manage" title="Manage">@WebSecurity.CurrentUserName</a>!
+                                <form id="logoutForm" action="~/Account/Logout" method="post">
+                                    @AntiForgery.GetHtml()
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+                                </form>
+                            </text>
+                        } else {
+                            <ul>
+                                <li><a href="~/Account/Register">Register</a></li>
+                                <li><a href="~/Account/Login">Log in</a></li>
+                            </ul>
+                        }
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="~/">Home</a></li>
+                            <li><a href="~/Calculator">Calculator</a></li>
+                            <li><a href="~/todo">todo</a></li>
+                            <li><a href="~/Tribute">Tribute</a></li>
+                            <li><a href="~/Student">Student</a></li>
+                            <li><a href="~/Test">Test</a></li>
+                            <li><a href="~/Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <div class="footer-basic">
+            <footer>
+                <center>
+                    <br />
+                    <h2 style="color:black;">Connect Us :)</h2>
+                    <br />
+                    <a href="https://www.facebook.com/tarun.sikhwal.79">
+                        <img class="smd" height="40" width="40" src="~/Photos/iconmonstr-facebook-5-240.png" />
+                    </a>
+                    <a href="https://www.instagram.com/tarun_sikhwal/">
+                        <img class="smd" height="40" width="40" src="~/Photos/iconmonstr-instagram-15-240.png" />
+                    </a>
+                    <a href="https://twitter.com/SikhwalTarun">
+                        <img class="smd" height="40" width="40" src="~/Photos/iconmonstr-twitter-5-240.png" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/tarun-sikhwal-3538591b1/">
+                        <img class="smd" height="40" width="40" src="~/Photos/iconmonstr-linkedin-5-240.png" />
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCjtEaoSbzBdXCgAbCI7w0Bg">
+                        <img class="smd" height="40" width="40" src="~/Photos/iconmonstr-youtube-10-240.png" />
+                    </a>
+
+                    <p class="copyright">Made with &#10084; by Tarun Sikhwal © 2022</p>
+                    <br /><br /> <br /><br />
+                </center>
+            </footer>
+        </div>
+      <style>
+          .footer-basic{
+          }
+          .smd {
+              padding: 2px 2px 2px 2px;
+              margin-left: 5px;
+              border-radius: 50%;
+              background: linear-gradient(145deg, #ffffff, #e6e6e6);
+              box-shadow: 8px 8px 20px #666666, -8px -8px 20px #ffffff;
+          }
+          .copyright {
+              font-size:medium;
+           
+              color:black;
+              font-style:oblique;
+          }
+      </style>
+            
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>

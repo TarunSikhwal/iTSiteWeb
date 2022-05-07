@@ -1,0 +1,129 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Student";
+}
+
+<hgroup class="title">
+    <h1>@Page.Title.</h1>
+    <h2>Your contact page.</h2>
+</hgroup>
+<div class="bg">
+    <label>Name</label>
+    <input class="text" id="nm1" />
+    <label>Email</label>
+    <input class="email" id="em1" />
+    <label>Website</label>
+    <input class="text" id="wb1" />
+    <label>Image Link</label>
+    <input class="text" id="img1" />
+
+    <label>Gender</label>
+    <div class="rb">
+        <input type="radio" id="contactChoice1"
+               name="contact" value="Male">Male
+        <input type="radio" id="contactChoice2"
+               name="contact" value="Female">Female
+    </div>
+    <label>Skills</label>
+    <div class="cb">
+        <input type="checkbox" id="Html" name="Html" value="Html">Html
+        <br>
+        <input type="checkbox" id="Java" name="Java" value="Java">Java
+        <br>
+        <input type="checkbox" id="CSS" name="CSS" value="CSS">CSS
+        <br>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <button onclick="myCreateFunction()">Submit</button>
+</div>
+<br /><br /><br />
+            <div class="tb">
+                <table id="myTable">
+                    <tr>
+                        <td>Name</td>
+                        <td>Email</td>
+                        <td>Website</td>
+                        <td>Image</td>
+                        <td>Gender</td>
+                        <td>Skills</td>
+                    </tr>
+                </table>
+            </div>
+<div class="tb" >
+    
+</div>
+
+    <style>
+        .bg {
+            border-radius: 39px;
+            background: linear-gradient(145deg, #cacaca, #f0f0f0);
+            box-shadow: 8px 8px 16px #5a5a5a, -8px -8px 16px #ffffff;
+            padding: 30px 30px 30px 30px;
+        }
+        .cb {
+            font-size: medium;
+        }
+
+        .rb {
+            word-spacing: 1px;
+        }
+
+        table, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 900px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: cornflowerblue;
+            color: white;
+            
+        }
+        .tb {
+            border-radius: 0px;
+            background: linear-gradient(145deg, #f9b9ff, #d29ce6);
+            box-shadow: 5px 5px 10px #896696, -5px -5px 10px #fff4ff;
+            padding: 30px 30px 30px 30px;
+        }
+        
+    </style>
+
+
+    <script>
+        function myCreateFunction() {
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+
+            cell1.innerHTML = document.getElementById("nm1").value;
+            cell2.innerHTML = document.getElementById("em1").value;
+            cell3.innerHTML = document.getElementById("wb1").value;
+            cell4.innerHTML = document.getElementById("img1").value;
+            if (document.getElementById("contactChoice1").checked == true) {
+                cell5.innerHTML = document.getElementById("contactChoice1").value;
+            } else {
+                cell5.innerHTML = document.getElementById("contactChoice2").value;
+            }
+            if (document.getElementById("Html").checked == true  ) {
+                cell6.innerHTML = document.getElementById("Html").value;
+                
+            }
+            if (document.getElementById("Java").checked == true) {
+                cell6.innerHTML += document.getElementById("Java").value;
+            }
+            if (document.getElementById("CSS").checked == true) {
+                cell6.innerHTML += document.getElementById("CSS").value;
+            }
+        }
+
+    </script>

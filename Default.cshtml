@@ -1,0 +1,161 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Home Page";
+}
+
+@section featured {
+<section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@Page.Title.</h1>
+            
+        </hgroup>
+        
+    </div>
+</section>
+}
+
+<center>
+    <div class="tp">
+        <div class="bg">
+            <img align="middle" src="~/NewFolder1/My Post (3).jpg" width="960" height="500">
+        </div>
+
+        <div class="tx">
+            <h2><p1>T</p1>arun S<p2>i</p2>khwal</h2>
+            <h4>Web Designer <p3>&</p3> Developer</h4>
+        </div>
+
+        <div class="box1">
+            <img height="450" width="960" src="~/Photos/bubble-website-headers-web-design.gif" /> <h2 style="font-size:xx-large; color:black; text-align:right; margin-right:200px; margin-bottom:400px;"><p1>T</p1>arun S<p2>i</p2>khwal</h2>
+        </div>
+
+
+        <div class="box2">
+            <div class="img">
+                <img style="padding: 10px 10px 10px 10px; border-radius: 0px; background: linear-gradient(145deg, #e6e6e6, #ffffff); box-shadow: 8px 8px 18px #e0e0e0, -8px -8px 18px #ffffff; " height="330" width="250" src="~/Photos/IMG_20210831_192941.jpg" />
+
+                <button style=" text-align: right; margin-left:200px;" class="button button2 btn btn-success" onclick=" window.open('https://drive.google.com/file/d/19WJjG9mGKLCj53-mjENan3N8dyZeDhQk/view?usp=sharing','_blank')"> Resume</button>
+                <script>
+                    window.open(
+                        'https://drive.google.com/file/d/19WJjG9mGKLCj53-mjENan3N8dyZeDhQk/view?usp=sharing',
+                        '_blank' // <- This is what makes it open in a new window.
+                    );
+                </script>
+
+            </div>
+
+        </div>
+
+        <div class="box3">
+            <div class="tp" style="background-color:deepskyblue; height:10px; width:960px;"> </div>
+            <br /><br /><br />
+            <h1><p1>R</p1>OAD <p2>M</p2>AP</h1>
+            <br /><br /><br />
+            <img style=" border-radius: 51px; background: linear-gradient(145deg, #cba7cd, #f1c6f4); box-shadow: 8px 8px 20px #5a4a5b, -8px -8px 20px #ffffff;" height="500" width="860" src="~/Photos/RoadMap.png" />
+
+        </div>
+        <br /><br /><br />  <br /><br /><br />
+        <div style="background-color:deepskyblue; height:10px; width:960px;"> </div>
+        <div class="box4">
+            <img height="550" width="960" src="~/NewFolder1/My Post (4).jpg" />
+        </div>
+        <div style="background-color:deepskyblue; height:10px; width:960px;"> </div>
+       
+            <audio  style=" margin:10px 10px 10px 10px;" src="~/Doc/arijit-singh-desh-mere-lyrics-ajay-d-sanjay-d-ammy-v-arko-manoj-m-bhuj-the-pride-of-india.mp3"
+                   controls autoplay></audio>
+       
+        <div style="background-color:deepskyblue; height:10px; width:960px;"> </div>
+    </div>
+</center>
+
+
+
+<style>
+   
+    p1{
+        color:darkblue;
+    }
+    p2{
+        color:red;
+    }
+    p3{
+        color:yellow;
+    }
+    .tx {
+        position: absolute;
+        top: 200px;
+        left: 30px;
+        font-size:x-large;
+        font-family:'Segoe UI Symbol';
+        
+    }
+    h2, h4 {
+        color: white;
+        text-shadow:inherit;
+    }
+    .tp {
+        position: relative;
+        text-align: center;
+        color: white;
+        border-radius: 0px;
+        background: #ffffff;
+        box-shadow: 5px 5px 27px #757575, -5px -5px 27px #ffffff;
+        
+    }
+    .box1{
+        height:110px;
+        width:960px;
+        background-color:black;
+    }
+    .box2 {
+        height: 700px;
+        width: 960px;
+        background-color: #fbfbfb;
+        
+    }
+    .img {
+        padding-left: 100px;
+        padding-top: 200px;
+        text-align:left;
+        
+    }
+    .txt {
+        tab-size: 2;
+        text-align: left;
+        font-size: large;
+        padding-right: 100px;
+        padding-top: 200px;
+    }
+    .button {
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px 200px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+    .button2 {
+        background-color: white;
+        color: black;
+        border: 2px solid #008CBA;
+    }
+
+        .button2:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+    .rot {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+
+    
+</style>
